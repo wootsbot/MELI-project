@@ -1,0 +1,34 @@
+{
+  "name": "challenge-MELI",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:wootsbot/challenge-MELI.git",
+  "author": "Jorge Luis Calleja Alvarado <jorgelca1205@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "next:lint": "next lint",
+    "prettier": "prettier --config .prettierrc \"./**/*.+(js|json|jsx)\" --write"
+  },
+  "lint-staged": {
+    "./**/*.+(js|json|jsx)": [
+      "prettier --write"
+    ]
+  },
+  "dependencies": {
+    "next": "^11.1.0",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2"
+  },
+  "devDependencies": {
+    "eslint": "7.32.0",
+    "eslint-config-next": "11.1.0",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-prettier": "^3.4.1",
+    "husky": "^7.0.2",
+    "lint-staged": "^11.1.2",
+    "prettier": "^2.3.2"
+  }
+}
