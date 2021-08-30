@@ -1,0 +1,44 @@
+@import 'styles/helpers';
+
+.header {
+  background-color: $brand-color;
+}
+
+.container {
+  width: 100%;
+  max-width: pixels-to-rem(1024);
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.nav {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  height: pixels-to-rem(64);
+}
+
+// .row {
+//   display: grid;
+//   grid-template-columns: repeat(12, 1fr);
+//   grid-gap: pixels-to-rem(16);
+// }
+
+// .row-item {
+//   grid-column: 2 / span 8;
+// }
+
+.input {
+  width: 100%;
+}
+
+.navigation {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  height: 100%;
+}
+
+.form {
+  width: 100%;
+}

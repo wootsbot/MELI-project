@@ -1,7 +1,8 @@
-import styles from '@/styles/Home.module.scss';
+import Layout from '@/components/Layout';
 
 function HomePage() {
-  return <div className={styles.error}>MELI</div>;
+  return <div>MELI</div>;
 }
 
+HomePage.Layout = Layout;
 export default HomePage;
