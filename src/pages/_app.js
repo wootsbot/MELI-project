@@ -1,4 +1,5 @@
 import '@fontsource/inter';
+import 'normalize.css';
 import '@/styles/global.scss';
 
 const Frame = ({ children }) => <>{children}</>;

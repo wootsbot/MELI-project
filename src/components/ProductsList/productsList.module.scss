@@ -1,0 +1,11 @@
+@import 'styles/helpers';
+
+.root {
+  list-style: none;
+  padding: pixels-to-rem(16);
+  background-color: #fff;
+
+  & > :not(:last-child) {
+    border-bottom: pixels-to-rem(1.5) solid $background-color;
+  }
+}

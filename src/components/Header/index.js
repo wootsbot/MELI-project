@@ -3,8 +3,6 @@ import clsx from 'clsx';
 import styles from './Header.module.scss';
 
 function Header() {
-  console.log('styles', styles);
-
   return (
     <header className={styles.header}>
       <div className={styles.container}>

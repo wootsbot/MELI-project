@@ -5,8 +5,7 @@ import Layout from '@/components/Layout';
 function HomePage() {
   const router = useRouter();
 
-  // console.log('router', router);
-  // console.log('data', data);
+  // console.log('items id', router);
 
   return <div>MELI</div>;
 }
