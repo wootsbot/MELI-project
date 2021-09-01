@@ -1,0 +1,11 @@
+@import 'styles/helpers';
+
+.root {
+  padding: pixels-to-rem(32);
+  background-color: #fff;
+}
+
+.details {
+  display: flex;
+  justify-content: space-between;
+}

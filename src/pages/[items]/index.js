@@ -15,11 +15,19 @@ function HomePage() {
 
   const { data, error, isValidating } = useSWR(search ? `/api/items?search=${search}&limit=4` : null, fetcher);
 
+  console.log('data', data);
+
   return (
     <ProductsList>
       {data?.results?.map((item) => (
         <li key={item?.id}>
-          <ProductCard imageSrc={item?.thumbnail} price={item?.price} title={item?.title} address={item?.address} />
+          <ProductCard
+            to={`/items/${item?.id}`}
+            imageSrc={item?.thumbnail}
+            price={item?.price}
+            title={item?.title}
+            address={item?.address}
+          />
         </li>
       ))}
     </ProductsList>

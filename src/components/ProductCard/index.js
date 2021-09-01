@@ -6,9 +6,9 @@ import formatPrice from '@/utils/format-price';
 
 import styles from './productCard.module.scss';
 
-function ProductCard({ imageSrc, price, title, address }) {
+function ProductCard({ to = '/', imageSrc, price, title, address }) {
   return (
-    <Link href="/">
+    <Link href={to}>
       <a className={styles.root}>
         <div className={styles['thumbnail-wrapper']}>
           <Image className={styles.thumbnail} src={clearThumbnail(imageSrc)} width={180} height={180} alt={title} />
