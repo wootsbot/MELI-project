@@ -1,5 +1,4 @@
 import { useRouter } from 'next/router';
-
 import useSWR from 'swr';
 
 import Layout from '@/components/Layout';
@@ -14,8 +13,6 @@ function HomePage() {
   const { search } = router.query;
 
   const { data, error, isValidating } = useSWR(search ? `/api/items?search=${search}&limit=4` : null, fetcher);
-
-  console.log('data', data);
 
   return (
     <ProductsList>

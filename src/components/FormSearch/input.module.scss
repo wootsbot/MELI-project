@@ -1,0 +1,38 @@
+@import 'styles/helpers';
+
+
+.wrapper {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  height: 100%;
+
+}
+
+.input {
+  border: none;
+  width: 100%;
+  color: $outline-color;
+  font-size: pixels-to-rem(18);
+  padding: 0 pixels-to-rem(10);
+  height: 100%;
+  max-height: pixels-to-rem(36);
+  min-height: pixels-to-rem(36);
+  border-radius: pixels-to-rem(2) 0 0 pixels-to-rem(2);
+}
+
+.button {
+  @include button-base;
+  height: 100%;
+  max-height: pixels-to-rem(36);
+  min-height: pixels-to-rem(36);
+  background-color: $background-color;
+  padding: pixels-to-rem(12);
+  border-radius: 0 pixels-to-rem(2) pixels-to-rem(2) 0;
+}
+
+.icon {
+  width: pixels-to-rem(16);
+  height: pixels-to-rem(16);
+}

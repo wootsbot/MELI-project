@@ -5,6 +5,8 @@ import '@/styles/global.scss';
 const Frame = ({ children }) => <>{children}</>;
 
 function AppRoot({ Component, pageProps }) {
+  console.log('pageProps', pageProps);
+
   const Layout = Component.Layout || Frame;
 
   return (
