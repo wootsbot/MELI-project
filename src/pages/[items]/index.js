@@ -1,31 +1,25 @@
 import { useRouter } from 'next/router';
-import useSWR from 'swr';
-
-import Margin from '@design-system/Margin';
 
 import SEO from '@/components/SEO';
 import Layout from '@/components/Layout';
+import Margin from '@design-system/Margin';
 import Container from '@/components/Container';
 import ProductCard from '@/components/ProductCard';
 import ProductsList from '@/components/ProductsList';
 import DisplayMessage from '@/components/DisplayMessage';
+import Breadcrumb from '@/components/Breadcrumb';
 
-import fetcher from '@/utils/fetcher';
+import useItems from '@/hooks/useItems';
+import useDomainDiscovery from '@/hooks/useDomainDiscovery';
 
 function HomePage() {
   const router = useRouter();
-
   const { search } = router.query;
 
-  const {
-    data: itemList,
-    error,
-    isValidating,
-  } = useSWR(search ? `/api/items?search=${search}&limit=4` : null, fetcher);
+  const { items } = useItems({ search });
+  const { discovery } = useDomainDiscovery({ search });
 
-  console.log('itemList', itemList);
-
-  const isShowList = itemList?.results?.length > 0;
+  const isShowList = items?.length > 0;
 
   return (
     <Container>
@@ -34,22 +28,33 @@ function HomePage() {
         description="Mercado Libre: La comunidad de compra y venta online más grande de América Latina."
       />
 
+      <Margin xs={16}>
+        <Breadcrumb>
+          <Breadcrumb.Item>{discovery?.category_name}</Breadcrumb.Item>
+          {discovery?.attributes?.map((attribute) => (
+            <Breadcrumb.Item key={attribute?.id}>{attribute?.value_name}</Breadcrumb.Item>
+          ))}
+        </Breadcrumb>
+      </Margin>
+
       {isShowList && (
         <Margin side="top" xs={16}>
-          <ProductsList>
-            {itemList?.results?.map((item) => (
-              <li key={item?.id}>
-                <ProductCard
-                  to={`/items/${item?.id}`}
-                  imageSrc={item?.thumbnail}
-                  price={item?.price}
-                  title={item?.title}
-                  address={item?.address}
-                  isFreeShipping={item?.shipping?.free_shipping}
-                />
-              </li>
-            ))}
-          </ProductsList>
+          <Margin side="bottom" xs={32}>
+            <ProductsList>
+              {items.map((item) => (
+                <li key={item?.id}>
+                  <ProductCard
+                    to={`/items/${item?.id}`}
+                    imageSrc={item?.thumbnail}
+                    price={item?.price}
+                    title={item?.title}
+                    address={item?.address}
+                    isFreeShipping={item?.shipping?.free_shipping}
+                  />
+                </li>
+              ))}
+            </ProductsList>
+          </Margin>
         </Margin>
       )}
 

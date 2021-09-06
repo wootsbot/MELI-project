@@ -1,0 +1,18 @@
+@import 'styles/helpers';
+
+.ol {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  color: $alternate-color;
+}
+
+.separator {
+  display: flex;
+  user-select: none;
+  margin-left: pixels-to-rem(8);
+  margin-right: pixels-to-rem(8);
+}

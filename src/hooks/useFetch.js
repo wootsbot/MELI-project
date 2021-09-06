@@ -1,8 +1,8 @@
 import { useState, useRef, useEffect } from 'react';
 
-const baseUrl = '/api';
+const baseUrl = 'https://api.mercadolibre.com';
 
-export default function useFetch(url, config = { mode: 'GET' }) {
+export default function useFetch(url) {
   const isMounted = useRef(false);
   const [data, setData] = useState(null);
   const [isError, setIsError] = useState(null);
@@ -27,14 +27,12 @@ export default function useFetch(url, config = { mode: 'GET' }) {
       }
     }
 
-    if (config.mode === 'GET') {
-      initFetch();
-    }
+    initFetch();
 
     return () => {
       isMounted.current = false;
     };
-  }, [config.mode, url]);
+  }, [url]);
 
   return { data, isError, isLoading };
 }

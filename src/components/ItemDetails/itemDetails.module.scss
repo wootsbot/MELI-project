@@ -8,6 +8,28 @@
 .details {
   display: flex;
   justify-content: space-between;
+
+  @include breakpoint-sm-down() {
+    flex-direction: column;
+  }
+}
+
+.thumbnail-wrapper {
+  &--lg {
+    display: block;
+
+    @include breakpoint-sm-down() {
+      display: none;
+    }
+  }
+
+  &--sm {
+    display: none;
+
+    @include breakpoint-sm-down() {
+      display: block;
+    }
+  }
 }
 
 .header {

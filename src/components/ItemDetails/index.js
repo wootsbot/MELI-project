@@ -13,13 +13,24 @@ function ItemDetails({ thumbnail = '', title, description, price, soldQuantity, 
   return (
     <div className={styles.root}>
       <div className={styles.details}>
-        <div>
+        <div className={styles['thumbnail-wrapper--lg']}>
           <Image
             className={styles.thumbnail}
             src={clearThumbnail(thumbnail)}
             alt={title}
             width={680}
             height={680}
+            layout="fixed"
+          />
+        </div>
+
+        <div className={styles['thumbnail-wrapper--sm']}>
+          <Image
+            className={styles.thumbnail}
+            src={clearThumbnail(thumbnail)}
+            alt={title}
+            width={400}
+            height={400}
             layout="fixed"
           />
         </div>

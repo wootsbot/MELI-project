@@ -4,9 +4,15 @@
   padding: pixels-to-rem(16);
   background-color: #fff;
   display: flex;
+  width: 100%;
   flex-direction: row;
   align-items: center;
   justify-content: center;
+
+  @include breakpoint-sm-down() {
+    flex-direction: column;
+    text-align: center;
+  }
 }
 .icon {
   margin-right: pixels-to-rem(32);

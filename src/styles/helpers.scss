@@ -1,26 +1,70 @@
 @import 'theme';
 @import 'functions/util';
 
-@mixin hide-up($size: md) {
-  @include media-breakpoint-up($size) {
-    display: none;
+@mixin breakpoint-375-up {
+  @media (min-width: 376px) {
+    @content;
   }
 }
 
-@mixin hide-down($size: md) {
-  @include media-breakpoint-down($size) {
-    display: none;
+@mixin breakpoint-375-down {
+  @media (max-width: 375px) {
+    @content;
   }
 }
 
-@mixin show-down($size: md) {
-  @include media-breakpoint-down($size) {
-    display: block;
+@mixin breakpoint-xs-down {
+  $break-point: map-get($break-points, xs);
+  @media (max-width: map-get($break-point, max-width)) {
+    @content;
   }
 }
 
-@mixin show-up($size: md) {
-  @include media-breakpoint-up($size) {
-    display: block;
+@mixin breakpoint-xs-up {
+  $break-point: map-get($break-points, xs);
+  @media (min-width: map-get($break-point, min-width)) {
+    @content;
+  }
+}
+
+@mixin breakpoint-sm-down {
+  $break-point: map-get($break-points, sm);
+  @media (max-width: map-get($break-point, max-width)) {
+    @content;
+  }
+}
+
+@mixin breakpoint-sm-up {
+  $break-point: map-get($break-points, sm);
+  @media (min-width: map-get($break-point, min-width)) {
+    @content;
+  }
+}
+
+@mixin breakpoint-md-up {
+  $break-point: map-get($break-points, md);
+  @media (min-width: map-get($break-point, min-width)) {
+    @content;
+  }
+}
+
+@mixin breakpoint-md-down {
+  $break-point: map-get($break-points, md);
+  @media (max-width: map-get($break-point, min-width)) {
+    @content;
+  }
+}
+
+@mixin breakpoint-lg-down {
+  $break-point: map-get($break-points, lg);
+  @media (max-width: map-get($break-point, min-width)) {
+    @content;
+  }
+}
+
+@mixin breakpoint-lg-up {
+  $break-point: map-get($break-points, lg);
+  @media (min-width: map-get($break-point, min-width)) {
+    @content;
   }
 }

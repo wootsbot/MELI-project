@@ -1,14 +1,15 @@
 @import 'styles/helpers';
 
 .header {
+  display: flex;
   background-color: $brand-color;
+  padding: 0 pixels-to-rem(16);
 }
 
 .container {
   width: 100%;
   max-width: pixels-to-rem(1024);
   margin: 0 auto;
-  padding: 0 1rem;
 }
 
 .nav {
@@ -17,16 +18,6 @@
   align-items: center;
   height: pixels-to-rem(64);
 }
-
-// .row {
-//   display: grid;
-//   grid-template-columns: repeat(12, 1fr);
-//   grid-gap: pixels-to-rem(16);
-// }
-
-// .row-item {
-//   grid-column: 2 / span 8;
-// }
 
 .input {
   width: 100%;
