@@ -1,12 +1,15 @@
+/* eslint-disable @next/next/no-img-element */
 import Image from 'next/image';
 import Link from 'next/link';
+
+import Margin from '@design-system/Margin';
 
 import clearThumbnail from '@/utils/clear-thumbnail';
 import formatPrice from '@/utils/format-price';
 
 import styles from './productCard.module.scss';
 
-function ProductCard({ to = '/', imageSrc, price, title, address }) {
+function ProductCard({ to = '/', imageSrc, price, title, address, isFreeShipping }) {
   return (
     <Link href={to}>
       <a className={styles.root}>
@@ -16,7 +19,20 @@ function ProductCard({ to = '/', imageSrc, price, title, address }) {
 
         <div className={styles.info}>
           <div className={styles['price-and-address']}>
-            <span className={styles.price}>{`$ ${formatPrice(price)}`}</span>
+            <div className={styles.shipping}>
+              <span className={styles.price}>{`$ ${formatPrice(price)}`}</span>
+
+              {isFreeShipping && (
+                <Margin side="left" xs={8}>
+                  <img
+                    className={styles['shipping-free']}
+                    src="/static/images/png/ic_shipping@2x.png"
+                    alt="isFreeShipping"
+                  />
+                </Margin>
+              )}
+            </div>
+
             <div className={styles.spacer} />
             <div className={styles.addressWrapper}>
               <address className={styles.address}>{address?.state_name}</address>

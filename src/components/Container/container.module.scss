@@ -1,0 +1,8 @@
+@import 'styles/helpers';
+
+.root {
+  width: 100%;
+  max-width: pixels-to-rem(1024);
+  margin: 0 auto;
+  padding: 0 1rem;
+}

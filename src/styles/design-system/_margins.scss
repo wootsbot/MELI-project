@@ -1,0 +1,66 @@
+@import 'styles/helpers';
+
+$margins: 8, 16, 24, 32, 40, 48, 56, 64, 72;
+
+@mixin set-margin-classes($margin) {
+  margin-bottom: $margin;
+  margin-top: $margin;
+
+  &--top {
+    margin-bottom: 0;
+    margin-top: $margin;
+  }
+
+  &--bottom {
+    margin-bottom: $margin;
+    margin-top: 0;
+  }
+
+  &--left {
+    margin-left: $margin;
+    margin-right: 0;
+  }
+
+  &--right {
+    margin-right: $margin;
+    margin-left: 0;
+  }
+}
+
+@mixin generate-margins($breakpoint) {
+  $size: map-get($breakpoint, size);
+
+  // Generate defult margin class
+  .margin {
+    @include set-margin-classes(map-get($breakpoint, margin));
+
+    // Generate default margin class for this specific breakpoint
+    &-#{$size} {
+      @include set-margin-classes(map-get($breakpoint, margin));
+
+      // Generate override margin classes for this specific breakpoint
+      @each $margin in $margins {
+        &-#{$margin} {
+          @include set-margin-classes(pixels-to-rem($margin));
+        }
+      }
+    }
+  }
+
+}
+
+// Generate margin classes for every breakpoint.
+// Every breakpoint (xs, sm, md, lg) will have
+//   1. A default margin class (example for sm):
+//    * margin-sm
+//    * margin-sm--top
+//    * margin-sm--bottom
+//   2. Margin classes that override the default (example for sm)
+//    * margin-sm-24
+//    * margin-sm-24--top
+//    * margin-sm-24--bottom
+@each $bpkey, $bpvalue in $break-points {
+  @media (min-width: map-get($bpvalue, min-width)) {
+    @include generate-margins($bpvalue);
+  }
+}

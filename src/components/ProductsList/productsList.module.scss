@@ -1,6 +1,7 @@
 @import 'styles/helpers';
 
 .root {
+  margin: 0;
   list-style: none;
   padding: pixels-to-rem(16);
   background-color: #fff;

@@ -8,7 +8,7 @@ function Brand() {
   return (
     <div className={styles.wrapper}>
       <Link href="/">
-        <img className={styles.brand} src="/static/images/png/Logo_ML@2x.png" alt="search" />
+        <img tabIndex="1" className={styles.brand} src="/static/images/png/Logo_ML@2x.png" alt="search" />
       </Link>
     </div>
   );

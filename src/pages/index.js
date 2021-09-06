@@ -1,19 +1,26 @@
-import { useRouter } from 'next/router';
-import useSWR from 'swr';
+import Margin from '@design-system/Margin';
 
+import SEO from '@/components/SEO';
 import Layout from '@/components/Layout';
-
-import fetcher from '@/utils/fetcher';
+import Container from '@/components/Container';
+import DisplayMessage from '@/components/DisplayMessage';
 
 function HomePage() {
-  const router = useRouter();
+  return (
+    <Container>
+      <SEO
+        title="Mercado Libre - Nunca dejes de buscar"
+        description="Mercado Libre: La comunidad de compra y venta online más grande de América Latina."
+      />
 
-  const { data, error, isValidating } = useSWR(`https://api.mercadolibre.com/items/MLA931449399`, fetcher);
-
-  // console.log('router', router);
-  // console.log('data', data);
-
-  return <div>MELI</div>;
+      <Margin side="top" xs={32}>
+        <DisplayMessage
+          title="Escribe en el buscador lo que quieres encontrar."
+          message="Escribe tu búsqueda en el campo que figura en la parte superior de la pantalla"
+        />
+      </Margin>
+    </Container>
+  );
 }
 
 HomePage.Layout = Layout;

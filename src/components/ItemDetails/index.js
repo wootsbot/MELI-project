@@ -1,7 +1,11 @@
 import Image from 'next/image';
 
-import clearThumbnail from '@/utils/clear-thumbnail';
+import Margin from '@design-system/Margin';
+import ButtonPrimary from '@design-system/ButtonPrimary';
+
 import formatPrice from '@/utils/format-price';
+import clearThumbnail from '@/utils/clear-thumbnail';
+import { conditionTypesLabels } from '@/utils/items/condition-types';
 
 import styles from './itemDetails.module.scss';
 
@@ -21,20 +25,26 @@ function ItemDetails({ thumbnail = '', title, description, price, soldQuantity, 
         </div>
 
         <div>
-          <div>
-            <span>{condition}</span>
-            <span>-</span>
-            <span>{soldQuantity}</span>
-            <span>vendidos</span>
-          </div>
-
-          <div>
-            <button>Comprar</button>
-          </div>
+          <Margin className={styles.header} side="bottom" xs={16}>
+            <span>{`${conditionTypesLabels[condition]} - ${soldQuantity} vendidos`}</span>
+          </Margin>
 
           <h1 className={styles.title}>{title}</h1>
-          <span>{`$ ${formatPrice(price)}`}</span>
+
+          <Margin xs={32}>
+            <span className={styles.price}>{`$ ${formatPrice(price)}`}</span>
+          </Margin>
+
+          <ButtonPrimary>Comprar</ButtonPrimary>
         </div>
+      </div>
+
+      <div>
+        <Margin side="bottom" xs={32}>
+          <h2 className={styles['description-title']}>Descripción del producto</h2>
+        </Margin>
+
+        <p className={styles.description}>{description}</p>
       </div>
     </div>
   );

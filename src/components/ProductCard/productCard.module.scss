@@ -60,3 +60,13 @@
 .spacer {
   flex: 1;
 }
+
+.shipping {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.shipping-free {
+  width: pixels-to-rem(16);
+}

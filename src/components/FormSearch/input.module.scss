@@ -30,6 +30,10 @@
   background-color: $background-color;
   padding: pixels-to-rem(12);
   border-radius: 0 pixels-to-rem(2) pixels-to-rem(2) 0;
+
+  &:focus {
+    box-shadow: $shadow-outline;
+  }
 }
 
 .icon {

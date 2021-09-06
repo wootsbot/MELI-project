@@ -9,3 +9,27 @@
   display: flex;
   justify-content: space-between;
 }
+
+.header {
+  font-size: pixels-to-rem(14);
+  color: $default-color;
+}
+
+.title {
+  font-size: pixels-to-rem(24);
+}
+
+.price {
+  font-size: pixels-to-rem(46);
+}
+
+.description-title {
+  font-size: pixels-to-rem(28);
+  color: $default-color;
+}
+
+.description {
+  font-size: pixels-to-rem(16);
+  white-space: pre-line;
+  color: $alternate-color;
+}

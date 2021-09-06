@@ -1,0 +1,23 @@
+@import 'styles/helpers';
+
+.root {
+  padding: pixels-to-rem(16);
+  background-color: #fff;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+.icon {
+  margin-right: pixels-to-rem(32);
+}
+
+.title {
+  font-size: pixels-to-rem(24);
+  color: $default-color;
+}
+
+.message {
+  font-size: pixels-to-rem(16);
+  color: $alternate-color;
+}

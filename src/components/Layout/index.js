@@ -5,7 +5,7 @@ function Layout({ children }) {
     <div>
       <Header />
 
-      <main>{children}</main>
+      <main role="main">{children}</main>
     </div>
   );
 }

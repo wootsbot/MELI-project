@@ -1,8 +1,9 @@
 import { useRouter } from 'next/router';
 import { useForm, FormProvider } from 'react-hook-form';
 
-import FormSearch from '@/components/FormSearch';
 import Brand from '@/components/Brand';
+import Margin from '@design-system/Margin';
+import FormSearch from '@/components/FormSearch';
 
 import styles from './Header.module.scss';
 
@@ -18,14 +19,16 @@ function Header() {
   }
 
   return (
-    <header className={styles.header}>
+    <header className={styles.header} role="banner">
       <div className={styles.container}>
-        <nav className={styles.nav}>
-          <Brand />
+        <nav role="navigation" aria-label="search items" className={styles.nav}>
+          <Margin side="right" xs={32}>
+            <Brand />
+          </Margin>
 
           <div className={styles.form}>
             <FormProvider {...formMethods}>
-              <form onSubmit={handleSubmit(handleSubmitDta)}>
+              <form role="search" onSubmit={handleSubmit(handleSubmitDta)}>
                 <FormSearch />
               </form>
             </FormProvider>
