@@ -12,7 +12,7 @@ import Breadcrumb from '@/components/Breadcrumb';
 import useItems from '@/hooks/useItems';
 import useDomainDiscovery from '@/hooks/useDomainDiscovery';
 
-function HomePage() {
+function ItemsPage() {
   const router = useRouter();
   const { search } = router.query;
 
@@ -22,53 +22,55 @@ function HomePage() {
   const isShowList = items?.length > 0;
 
   return (
-    <Container>
-      <SEO
-        title="Mercado Libre - Nunca dejes de buscar"
-        description="Mercado Libre: La comunidad de compra y venta online más grande de América Latina."
-      />
+    <Layout>
+      <Container>
+        <SEO
+          title="Mercado Libre - Nunca dejes de buscar"
+          description="Mercado Libre: La comunidad de compra y venta online más grande de América Latina."
+        />
 
-      <Margin xs={16}>
-        <Breadcrumb>
-          <Breadcrumb.Item>{discovery?.category_name}</Breadcrumb.Item>
-          {discovery?.attributes?.map((attribute) => (
-            <Breadcrumb.Item key={attribute?.id}>{attribute?.value_name}</Breadcrumb.Item>
-          ))}
-        </Breadcrumb>
-      </Margin>
+        <Margin xs={16}>
+          <Breadcrumb>
+            <Breadcrumb.Item>{discovery?.category_name}</Breadcrumb.Item>
+            {discovery?.attributes?.map((attribute) => (
+              <Breadcrumb.Item key={attribute?.id}>{attribute?.value_name}</Breadcrumb.Item>
+            ))}
+          </Breadcrumb>
+        </Margin>
 
-      {isShowList && (
-        <Margin side="top" xs={16}>
-          <Margin side="bottom" xs={32}>
-            <ProductsList>
-              {items.map((item) => (
-                <li key={item?.id}>
-                  <ProductCard
-                    to={`/items/${item?.id}`}
-                    imageSrc={item?.thumbnail}
-                    price={item?.price}
-                    title={item?.title}
-                    address={item?.address}
-                    isFreeShipping={item?.shipping?.free_shipping}
-                  />
-                </li>
-              ))}
-            </ProductsList>
+        {isShowList && (
+          <Margin side="top" xs={16}>
+            <Margin side="bottom" xs={32}>
+              <ProductsList>
+                {items.map((item) => (
+                  <li key={item?.id}>
+                    <ProductCard
+                      to={`/items/${item?.id}`}
+                      imageSrc={item?.thumbnail}
+                      price={item?.price}
+                      title={item?.title}
+                      address={item?.address}
+                      isFreeShipping={item?.shipping?.free_shipping}
+                    />
+                  </li>
+                ))}
+              </ProductsList>
+            </Margin>
           </Margin>
-        </Margin>
-      )}
+        )}
 
-      {!isShowList && (
-        <Margin side="top" xs={32}>
-          <DisplayMessage
-            title="Escribe en el buscador lo que quieres encontrar."
-            message="Escribe tu búsqueda en el campo que figura en la parte superior de la pantalla"
-          />
-        </Margin>
-      )}
-    </Container>
+        {!isShowList && (
+          <Margin side="top" xs={32}>
+            <DisplayMessage
+              title="Escribe en el buscador lo que quieres encontrar."
+              message="Escribe tu búsqueda en el campo que figura en la parte superior de la pantalla"
+            />
+          </Margin>
+        )}
+      </Container>
+    </Layout>
   );
 }
 
-HomePage.Layout = Layout;
-export default HomePage;
+// ItemsPage.Layout = Layout;
+export default ItemsPage;

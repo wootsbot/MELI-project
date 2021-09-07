@@ -12,7 +12,7 @@ import useDomainDiscovery from '@/hooks/useDomainDiscovery';
 
 import { attributesTypes } from '@/utils/attributes-types';
 
-function HomePage() {
+function ItemPage() {
   const router = useRouter();
   const { itemId } = router.query;
 
@@ -55,5 +55,5 @@ function HomePage() {
   );
 }
 
-HomePage.Layout = Layout;
-export default HomePage;
+ItemPage.Layout = Layout;
+export default ItemPage;

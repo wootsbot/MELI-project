@@ -1,0 +1,197 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<ItemsPage /> Should render correctly 1`] = `
+<div>
+  <div>
+    <header
+      class="header"
+      role="banner"
+    >
+      <div
+        class="container"
+      >
+        <nav
+          aria-label="search items"
+          class="nav"
+          role="navigation"
+        >
+          <div
+            class="margin-xs-32--right"
+          >
+            <div
+              class="wrapper"
+            >
+              <img
+                alt="search"
+                class="brand"
+                src="/static/images/png/Logo_ML@2x.png"
+                tabindex="1"
+              />
+            </div>
+          </div>
+          <div
+            class="form"
+          >
+            <form
+              role="search"
+            >
+              <div
+                class="wrapper"
+              >
+                <input
+                  aria-label="search"
+                  class="input"
+                  name="searchField"
+                  placeholder="Nunca dejes de buscar"
+                  tabindex="2"
+                />
+                <button
+                  class="button"
+                  tabindex="3"
+                  type="submit"
+                >
+                  <img
+                    alt="search"
+                    class="icon"
+                    src="/static/images/png/ic_Search@2x.png"
+                    type="submit"
+                  />
+                </button>
+              </div>
+            </form>
+          </div>
+        </nav>
+      </div>
+    </header>
+    <main
+      role="main"
+    >
+      <div
+        class="root"
+      >
+        <div
+          class="margin-xs-16"
+        >
+          <nav
+            aria-label="breadcrumb"
+          >
+            <ol
+              class="ol"
+            >
+              <li
+                class="li"
+              >
+                <span>
+                  category name
+                </span>
+              </li>
+              <li
+                aria-hidden="true"
+                class="separator"
+              >
+                &gt;
+              </li>
+              <li
+                class="li"
+              >
+                <span>
+                  name
+                </span>
+              </li>
+            </ol>
+          </nav>
+        </div>
+        <div
+          class="margin-xs-16--top"
+        >
+          <div
+            class="margin-xs-32--bottom"
+          >
+            <ol
+              class="root"
+            >
+              <li>
+                <a
+                  class="root"
+                  href="/items/MLA903951222"
+                >
+                  <div
+                    class="thumbnail-wrapper"
+                  >
+                    <div
+                      style="display: inline-block; max-width: 100%; overflow: hidden; position: relative; box-sizing: border-box; margin: 0px;"
+                    >
+                      <div
+                        style="box-sizing: border-box; display: block; max-width: 100%;"
+                      >
+                        <img
+                          alt=""
+                          aria-hidden="true"
+                          src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTgwIiBoZWlnaHQ9IjE4MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB2ZXJzaW9uPSIxLjEiLz4="
+                          style="max-width: 100%; display: block; margin: 0px; padding: 0px;"
+                        />
+                      </div>
+                      <noscript />
+                      <img
+                        alt="Cable Cargador Usb Original Lightning iPhone 6 7 8 X Xs Xr"
+                        class="thumbnail"
+                        data-nimg="true"
+                        decoding="async"
+                        src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
+                        style="position: absolute; top: 0px; left: 0px; bottom: 0px; right: 0px; box-sizing: border-box; padding: 0px; margin: auto; display: block; width: 0px; height: 0px; min-width: 100%; max-width: 100%; min-height: 100%; max-height: 100%;"
+                      />
+                    </div>
+                  </div>
+                  <div
+                    class="info"
+                  >
+                    <div
+                      class="price-and-address"
+                    >
+                      <div
+                        class="shipping"
+                      >
+                        <span
+                          class="price"
+                        >
+                          $ 1,899.99
+                        </span>
+                        <div
+                          class="margin-xs-8--left"
+                        >
+                          <img
+                            alt="isFreeShipping"
+                            class="shipping-free"
+                            src="/static/images/png/ic_shipping@2x.png"
+                          />
+                        </div>
+                      </div>
+                      <div
+                        class="spacer"
+                      />
+                      <div
+                        class="addressWrapper"
+                      >
+                        <address
+                          class="address"
+                        >
+                          Capital Federal
+                        </address>
+                      </div>
+                    </div>
+                    <h3
+                      class="title"
+                    >
+                      Cable Cargador Usb Original Lightning iPhone 6 7 8 X Xs Xr
+                    </h3>
+                  </div>
+                </a>
+              </li>
+            </ol>
+          </div>
+        </div>
+      </div>
+    </main>
+  </div>
+</div>
+`;

@@ -3,6 +3,7 @@
     "baseUrl": "./src",
     "paths": {
       "@design-system/*": ["./@design-system/*"],
+      "@/pages/*": ["./pages/*"],
       "@/components/*": ["./components/*"],
       "@/hooks/*": ["./hooks/*"],
       "@/styles/*": ["./styles/*"],

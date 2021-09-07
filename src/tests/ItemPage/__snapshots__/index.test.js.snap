@@ -1,0 +1,153 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<ItemPage /> Should render correctly 1`] = `
+<div>
+  <div
+    class="root"
+  >
+    <div
+      class="margin-xs-16"
+    >
+      <nav
+        aria-label="breadcrumb"
+      >
+        <ol
+          class="ol"
+        >
+          <li
+            class="li"
+          >
+            <span>
+              category name
+            </span>
+          </li>
+          <li
+            aria-hidden="true"
+            class="separator"
+          >
+            &gt;
+          </li>
+          <li
+            class="li"
+          >
+            <span>
+              name
+            </span>
+          </li>
+          <li
+            aria-hidden="true"
+            class="separator"
+          >
+            &gt;
+          </li>
+          <li
+            class="li"
+          >
+            <span>
+              name
+            </span>
+          </li>
+        </ol>
+      </nav>
+    </div>
+    <div
+      class="margin-xs-16--top"
+    >
+      <div
+        class="margin-xs-32--bottom"
+      >
+        <div
+          class="root"
+        >
+          <div
+            class="details"
+          >
+            <div
+              class="thumbnail-wrapper--lg"
+            >
+              <div
+                style="overflow: hidden; box-sizing: border-box; display: inline-block; position: relative; width: 680px; height: 680px;"
+              >
+                <noscript />
+                <img
+                  alt="Cable Cargador Usb Original Lightning iPhone 6 7 8 X Xs Xr"
+                  class="thumbnail"
+                  data-nimg="true"
+                  decoding="async"
+                  src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
+                  style="position: absolute; top: 0px; left: 0px; bottom: 0px; right: 0px; box-sizing: border-box; padding: 0px; margin: auto; display: block; width: 0px; height: 0px; min-width: 100%; max-width: 100%; min-height: 100%; max-height: 100%;"
+                />
+              </div>
+            </div>
+            <div
+              class="thumbnail-wrapper--sm"
+            >
+              <div
+                style="overflow: hidden; box-sizing: border-box; display: inline-block; position: relative; width: 400px; height: 400px;"
+              >
+                <noscript />
+                <img
+                  alt="Cable Cargador Usb Original Lightning iPhone 6 7 8 X Xs Xr"
+                  class="thumbnail"
+                  data-nimg="true"
+                  decoding="async"
+                  src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
+                  style="position: absolute; top: 0px; left: 0px; bottom: 0px; right: 0px; box-sizing: border-box; padding: 0px; margin: auto; display: block; width: 0px; height: 0px; min-width: 100%; max-width: 100%; min-height: 100%; max-height: 100%;"
+                />
+              </div>
+            </div>
+            <div>
+              <div
+                class="margin-xs-16--bottom header"
+              >
+                <span>
+                  Nuevo - 3 vendidos
+                </span>
+              </div>
+              <h1
+                class="title"
+              >
+                Cable Cargador Usb Original Lightning iPhone 6 7 8 X Xs Xr
+              </h1>
+              <div
+                class="margin-xs-32"
+              >
+                <span
+                  class="price"
+                >
+                  $ 1,899.99
+                </span>
+              </div>
+              <button
+                class="button button--primary"
+              >
+                <span
+                  class="button--label"
+                >
+                  Comprar
+                </span>
+              </button>
+            </div>
+          </div>
+          <div>
+            <div
+              class="margin-xs-32--bottom"
+            >
+              <h2
+                class="description-title"
+              >
+                Descripción del producto
+              </h2>
+            </div>
+            <p
+              class="description"
+            >
+              description
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
