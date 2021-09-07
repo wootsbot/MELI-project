@@ -14,3 +14,7 @@ npm-debug.log
 
 *~
 package-lock.json
+
+**/public/workbox-*.js
+**/public/sw.js.map
+**/public/sw.js
