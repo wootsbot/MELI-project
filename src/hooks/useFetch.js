@@ -1,6 +1,6 @@
 import { useState, useRef, useEffect } from 'react';
 
-const baseUrl = 'https://api.mercadolibre.com';
+const baseUrl = process.env.NEXT_PUBLIC_BASE_URL;
 
 export default function useFetch(url) {
   const isMounted = useRef(false);

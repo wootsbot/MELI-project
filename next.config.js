@@ -1,6 +1,13 @@
 const path = require('path');
 
-module.exports = {
+const isProd = process.env.NODE_ENV === 'production';
+const withPWA = require('next-pwa');
+
+module.exports = withPWA({
+  pwa: {
+    disable: !isProd,
+    dest: 'public',
+  },
   images: {
     loader: 'imgix',
     path: 'https://http2.mlstatic.com/',
@@ -16,4 +23,5 @@ module.exports = {
       localIdentName: '[path][name]__[local]--[hash:base64:5]',
     },
   },
-};
+  productionBrowserSourceMaps: true,
+});
